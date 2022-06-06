@@ -47,5 +47,4 @@ urlpatterns = [
                   path('boards/<pk>/topics/<topic_pk>/posts/<post_pk>/edit/',
                        views.PostUpdateView.as_view(), name='edit_post'),
                   path('admin/', admin.site.urls),
-                  path("accounts/", include("allauth.urls")),  # new
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
