@@ -180,22 +180,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# providers social account of django allauth
-SOCIALACCOUNT_PROVIDERS = {
-    'telegram': {
-        'TOKEN': '1837918859:AAG-om41cR3jfO-jZLTaPvzhk2_NIbE695E'
-    },
-    'google': {
-            'SCOPE': [
-                'profile',
-                'email',
-            ],
-            'AUTH_PARAMS': {
-                'access_type': 'online',
-            }
-        }
-}
-
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals())
 
