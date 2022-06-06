@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -47,4 +47,5 @@ urlpatterns = [
                   path('boards/<pk>/topics/<topic_pk>/posts/<post_pk>/edit/',
                        views.PostUpdateView.as_view(), name='edit_post'),
                   path('admin/', admin.site.urls),
+                  path("accounts/", include("allauth.urls")),  # new
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

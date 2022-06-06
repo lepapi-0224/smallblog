@@ -18,6 +18,7 @@ class BoardListView(ListView):
     model = Board
     context_object_name = 'boards'
     template_name = 'home.html'
+    queryset = Board.objects.all()
 
 
 @method_decorator(login_required, name='dispatch')
